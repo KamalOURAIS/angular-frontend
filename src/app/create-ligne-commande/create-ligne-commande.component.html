@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <h2>Nouvelle Ligne de Commande</h2>
+    <form [formGroup]="commandeForm" (ngSubmit)="createLDC()">
+      <div class="mb-3">
+        <label for="produit" class="form-label">Produit</label>
+        <select class="form-select" formControlName="produit" id="produit">
+          <option *ngFor="let produit of produits" [ngValue]="produit">{{ produit.nom }} : prix {{ produit.prix }}</option>
+        </select>
+      </div>
+      
+      <div class="mb-3">
+        <label for="quantite" class="form-label">Quantite a Commande</label>
+        <input type="number" class="form-control" formControlName="quantite" id="quantite" required min="0">
+      </div>
+      <button type="submit" class="btn btn-primary">Valider</button>
+    </form>
+  </div>

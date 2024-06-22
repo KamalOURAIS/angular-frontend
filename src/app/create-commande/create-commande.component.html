@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <h2>Nouvelle Commande</h2>
+    <form [formGroup]="commandeForm" (ngSubmit)="createCommande()">
+      <div class="mb-3">
+        <label for="client" class="form-label">Client</label>
+        <select class="form-select" formControlName="client" id="client">
+          <option *ngFor="let client of client" [ngValue]="client">{{ client.nom }} {{ client.prenom }}</option>
+        </select>
+      </div>
+      
+      <div class="mb-3">
+        <label for="date" class="form-label">Date de Commande</label>
+        <input type="date" class="form-control" formControlName="date" id="date">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Valider Commande</button>
+    </form>
+  </div>

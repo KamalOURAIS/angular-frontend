@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Produits</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+
+    }
+
+    /* Container Styles */
+    .col-md-6.offset-md-3 {
+      background-color: #ffffff;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    .form-control:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    }
+
+    /* Button Styles */
+    .btn-success {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #28a745;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+    }
+
+    .btn-success:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    }
+  </style>
+</head>
+<body>
+<div class="col-md-6 offset-md-3">
+    <h3>Update Produit</h3>
+    <form (ngSubmit)="onSubmit()">
+        <br><br>
+        <div class="form-group">
+            <label for="nom">NomProduit</label>
+            <input type="text" class="form-control" id="nom"
+                [(ngModel)]="produits.nom" name="nom"
+                placeholder="Enter votre Produit" title="Enter votre produit">
+                
+        </div>
+        <br>
+    
+        <div class="form-group">
+            <label for="quantiteStock">Quantiter</label>
+            <input type="text" class="form-control" id="quantiteStock"
+                [(ngModel)]="produits.quantiteStock" name="quantiteStock">
+        </div>
+        <br>
+    
+        <div class="form-group">
+            <label for="prix">Prix</label>
+            <input type="text" class="form-control" id="prix"
+                [(ngModel)]="produits.prix" name="prix">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    </form>
+</div>
+

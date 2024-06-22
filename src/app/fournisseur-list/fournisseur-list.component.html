@@ -1,0 +1,24 @@
+<div>
+<p>Fournisseur List</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>IdFournisseur</th>
+            <th>NomFournisseur</th>
+            <th>PrenomFournisseur</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fournisseur of fournisseurs">
+            <td>{{ fournisseur.id }}</td>
+            <td>{{ fournisseur.nom }}</td>
+            <td>{{ fournisseur.prenom }}</td>
+               <td>
+                <button (click) = "updateFournisseur(fournisseur.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteFournisseur(fournisseur.id)" class = "btn btn-danger"  style="margin-left: 10px" > Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

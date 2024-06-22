@@ -1,0 +1,16 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Update Commande</h3>
+    <form (ngSubmit)="onSubmit()">
+    
+    
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" id="date"
+                [(ngModel)]="commande.date" name="date" placeholder="Select a date" title="Select a date">
+        </div>
+        
+    
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    </form>
+</div>
